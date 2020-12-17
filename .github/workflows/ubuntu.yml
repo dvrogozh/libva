@@ -51,6 +51,10 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
+    - name: check installed
+      run: |
+        which gcc
+        find /usr -name gcc*
     - name: install prerequisites
       run: sudo apt-get install -y
         libdrm-dev
